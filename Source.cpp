@@ -66,6 +66,17 @@ int main()
 		cout << "character('Z', -1) threw an exception: " << e.what() << endl;
 	}
 
+	// Fourth try/catch statement, expected to throw InvalidCharacterException since ? is not a valid letter
+
+	try
+	{
+		cout << "character('?', 5) = " << character('?', 5) << endl;
+	}
+	catch (const exception& e)
+	{
+		cout << "character('?', 5) threw an exception: " << e.what() << endl;
+	}
+
 }
 
 char character(char start, int offset)
