@@ -55,6 +55,17 @@ int main()
 		cout << "character('a', -1) threw an exception: " << e.what() << endl;
 	}
 
+	// Third try/catch statement, expected to return Y
+
+	try
+	{
+		cout << "character('Z', -1) = " << character('Z', -1) << endl;
+	}
+	catch (const exception& e)
+	{
+		cout << "character('Z', -1) threw an exception: " << e.what() << endl;
+	}
+
 }
 
 char character(char start, int offset)
