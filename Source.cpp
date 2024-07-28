@@ -77,6 +77,17 @@ int main()
 		cout << "character('?', 5) threw an exception: " << e.what() << endl;
 	}
 
+	// Fifth try/catch statement, excepted to throw InvalidRangeException since capital A switches cases to lower case a
+
+	try
+	{
+		cout << "character('A', 32) = " << character('A', 32) << endl;
+	}
+	catch (const exception& e)
+	{
+		cout << "character('A', 32) threw an exception: " << e.what() << endl;
+	}
+
 }
 
 char character(char start, int offset)
