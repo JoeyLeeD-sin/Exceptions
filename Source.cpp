@@ -44,6 +44,17 @@ int main()
 		cout << "character('a', 1) threw an exception: " << e.what() << endl;
 	}
 
+	// Second try/catch statement, expected to throw InvalidRangeException since a - 1 is not a valid letter. 
+
+	try
+	{
+		cout << "character('a', -1) = " << character('a', -1) << endl;
+	}
+	catch (const exception& e)
+	{
+		cout << "character('a', -1) threw an exception: " << e.what() << endl;
+	}
+
 }
 
 char character(char start, int offset)
